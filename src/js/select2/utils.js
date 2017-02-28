@@ -192,7 +192,7 @@ define([
         // By default, dash-separated becomes camelCase
         key = key.substring(0, 1).toLowerCase() + key.substring(1);
 
-        if (!(key in dataLevel)) {
+        if (dataLevel && !(key in dataLevel)) {
           dataLevel[key] = {};
         }
 
